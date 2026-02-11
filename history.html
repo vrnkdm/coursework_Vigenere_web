@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+      <link rel="stylesheet" href="styles.css">
+       <!-- <style>
+     .menu-main {
+    list-style: none;/*видалення маркерів списку*/
+    margin: 0px 0 0px;/*зовнішній відступ від меню*/
+    padding: 25px 0 5px;/*внутрішній відступ від меню*/
+    text-align: center;/*вирівнювання тексту по центру*/
+    
+  }
+  .menu-main li {display: inline-block;}/*встановлення стилів для елементів списку в меню*/
+  .menu-main li:after {/*додавання роздільника між елем. меню*/
+    content: "|";/*встан. текст в якості вмісту*/
+    color: #44576D;
+    display: inline-block;/*робить роздільник блочним елементом*/
+    vertical-align:top;/*вирівнювання по верхньому краю елем. меню*/
+  }
+  .menu-main li:last-child:after {content: none;}/*видалення роздільника після останнього елемента*/
+  .menu-main a { /*стилі для посилання меню*/
+    text-decoration: none;/*видалення підкреслення з посилання*/
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;/*міжсимвольний інтервал*/
+    position: relative;/*встановлення позиції елемента як відносної*/
+    padding-bottom: 20px;/*внутрішній відступ знизу*/
+    margin: 0 34px 0 30px;/*зовнішні відступи для посилання*/
+    font-size: 17px;
+    text-transform: uppercase;/*перетворення тексту в верхній регістр*/
+    display: inline-block;/**робить посилання блочним елементам*/
+    transition: color .2s;/**плавна анімація зміни кольору*/
+  }
+  .menu-main a, .menu-main a:visited {color: #44576D;}/*кольори посилань та відвідуваних посилань*/
+  .menu-main a.current, .menu-main a:hover{color:#d1d1e0;}/*стилі для активного посилання та посилання при наведенні*/
+  .menu-main a:before,
+  .menu-main a:after {/*встановлює підкреслення для посилання*/
+    content: "";/*додавання підкреслення*/
+    position: absolute;/*встановлення позиції*/
+    height: 4px;/*висота підкреслення*/
+    top: auto;/*позиціія зверху*/
+    right: 50%;/*розміщення підкреслення по центру*/
+    bottom: -5px;/*зміщення підкреслення вгору*/
+    left: 50%;/*розміщення підкреслення по центру*/
+    background: #d1d1e0;
+    transition: .8s;/*плавна анімація зміни підкреслення*/
+  }
+  .menu-main a:hover:before, .menu-main .current:before {left: 0;}/*змінює положення підкресленняпри наведенні*/
+  .menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+  
+  /*Навігація по сторінці*/
+  .pills{
+  margin-left: 0; /*відступ зліва на*/
+  list-style: none;/* забирає маркери списку */
+  list-style: none;
+  counter-reset: li;/*скидання лічильник li */
+  font-family: calibri;
+}
+.pills li {
+  padding: 10px 0;
+  position: relative;/*відносне позиціонування елемента*/
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1em;
+  background: #E3DEDC;
+  width: 15%;
+}
+.pills li:before {
+  padding: 10px 0;
+  position: absolute;/*абсолютне позиціонування елемента*/
+  top: 0;
+  bottom: 0;
+  left: -1.5em;
+  width: 1.875em;
+  text-align: center;
+  color: white;
+  font-weight: bold;/*встановлюється жирний начерк тексту*/
+  background: #44576D;
+  border-bottom-left-radius: 70em;/*радіус закруглення для лівого нижнього кута елемента*/
+  border-top-left-radius: 70em;/*радіус закруглення для лівого верхнього кута елемента*/
+  counter-increment: li;/*збільшення значення лічильника li*/
+  content: counter(li);/*вставленняо значення лічильника li в елемент*/
+  }
+
+/*Фон head*/
+.fon {
+  background-color: #AAC7D8;
+}
+
+/*Фон body*/
+.fonts {
+  background-color: #DFEBF6;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+/*Фон footer*/
+.botton{
+  background-color: #29353C;
+}
+
+/*Заголовки*/
+h1{
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+}
+
+h2, h4 {
+  font-family: "Raleway", sans-serif;
+  margin-left: 15px;
+  color: #3e4b53;
+}
+
+/*Посилання*/
+a {
+  text-decoration: none;
+  color: #7171da;;
+}
+a:hover{
+  color: #bb99ff;
+}
+a:visited {
+  color: #884dff;
+}
+
+
+p {
+text-align: justify;
+margin-left: 2%;
+margin-right:  2%; 
+}
+
+div {
+  margin-left: 0%;
+  margin-right:  0%; 
+}
+
+/*Зображення*/
+.image-border {
+  border-radius: 10px;  /* закруглення кутів */
+    border: 5px solid #5c7cbc; /* колір та ширина рамки */
+    box-shadow: 2px 1px 5px #8099cb; /* колір і розмір тіней */
+}
+.image-border:hover{
+  border:5px solid #a4b6da;
+}
+
+/*Підвал*/
+.contact {
+    display: flex;
+    justify-content: space-around;
+  }
+  .contact li {
+    list-style: none;/* забирає маркери списку */
+  }
+
+  /*Кнопка вверх*/
+body {
+  min-height: 200px;
+}
+
+.btn-up {
+  position: fixed;
+  background-color: #673ab7;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+.btn-up::before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+  .btn-up_hide {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #512da8;
+    }
+  }
+
+
+        </style>-->
+
+        <header class="fon">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Історія</title>
+<!--Шрифт-->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+<!-- Меню горизонтальне -->
+<div>
+<nav> 
+        <ul class="menu-main">
+            <li><a class="li" href="index.html" >Головна</a></li>
+            <li><a href="/">Історія</a></li>
+            <li><a href="additional.html">Додатковий матеріал</a></li>
+           <!-- <li><a href="lab.html">JavaScript</a></li>--> <!--Закоментовано, бо для курсової не потрібно-->
+          </ul>
+  </nav>
+</div>
+  <h1 align="center">Історія</h1>
+  <br><br><br>
+        </header>
+    </head>
+    <body>
+      <main  class="fonts">
+        <div class="btn-up btn-up_hide"></div>
+
+        <script>
+          const btnUp = {
+            el: document.querySelector('.btn-up'),
+            show() {
+              // видалимо у кнопці клас btn-up_hide
+              this.el.classList.remove('btn-up_hide');
+            },
+            hide() {
+              // додамо до кнопки клас btn-up_hide
+              this.el.classList.add('btn-up_hide');
+            },
+            addEventListener() {
+              // при прокрутці вмісту сторінки 
+              window.addEventListener('scroll', () => {
+                // визначаємо величину прокрутки 
+                const scrollY = window.scrollY || document.documentElement.scrollTop;
+                // якщо сторінка прокручена більше ніж на 400px, торобимо кнопку видимою, в іншому випадку ховаємо 
+                scrollY > 400 ? this.show() : this.hide();
+              });
+              // при натисканні на кнопку .btn-up
+              document.querySelector('.btn-up').onclick = () => {
+                // переміщаємося на початок сторінки
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: 'smooth'
+                });
+              }
+            }
+          }
+          btnUp.addEventListener();
+        </script>
+
+        <!-- Меню -->
+        <div class="fonts">
+        <div>
+        <nav>
+            <br>
+            <ul class="pills">
+                <li><a href="#History">Історія створення шифру</a></li>
+                <li><a href="#Solution">Хто і як розгадав шифр Віжинера</a></li>
+                <li><a href="#Used">Де використовували цей метод</a></li>
+            </ul>
+            </nav>
+        </div>
+        <!-- Історія створення -->
+            <div>
+               <a name="History"></a>
+           <p><br><h2>Історія створення шифру</h2> </p>
+            <hr>
+           <a href="pic2.jpg" target=_blank> <img src="pic2.jpg" width="250" height="300" align="right" hspace=15 alt="Блез Віженер"  title="Блез Віженер" class="image-border"></a>
+           <p> Перший точний документований опис багатоалфавітного шифру було сформульовано <a href="https://uk.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BE%D0%BD-%D0%91%D0%B0%D1%82%D1%82%D1%96%D1%81%D1%82%D0%B0_%D0%90%D0%BB%D1%8C%D0%B1%D0%B5%D1%80%D1%82%D1%96"target="_blank">Леоном Баттіста Альберті</a> 1467 року, для перемикання між алфавітами використовувався металевий шифрувальний диск. Система Альберті перемикає алфавіти після кількох зашифрованих слів. Пізніше, 1518 року, <a href="https://uk.wikipedia.org/wiki/%D0%99%D0%BE%D0%B3%D0%B0%D0%BD%D0%B5%D1%81_%D0%A2%D1%80%D1%96%D1%82%D0%B5%D0%BC%D1%96%D1%83%D1%81" target="_blank">Йоганн Трісемус</a> у своїй роботі "Поліграфія" винайшов <a href="https://ru.wikipedia.org/wiki/Tabula_recta#:~:text=Tabula%20recta%20(%D0%BB%D0%B0%D1%82.,%D0%BF%D1%83%D1%82%D0%B5%D0%BC%20%D1%81%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%20%D0%BF%D1%80%D0%B5%D0%B4%D1%8B%D0%B4%D1%83%D1%89%D0%B5%D0%B9%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8%20%D0%B2%D0%BB%D0%B5%D0%B2%D0%BE." target="_blank">tabula recta</a> -- центральний компонент шифру Віженера.</p>
+            <p></p><a href="https://uk.wikipedia.org/wiki/%D0%91%D0%BB%D0%B5%D0%B7_%D0%B4%D0%B5_%D0%92%D1%96%D0%B6%D0%B5%D0%BD%D0%B5%D1%80"target="_blank"><p>Блез Віженер</a> представив свій опис простого, але стійкого шифру перед комісією <a href="https://uk.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D1%80%D1%96%D1%85_III_(%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%8C_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%96%D1%97)"target="_blank">Генріха III</a> у Франції 1586 року, і пізніше винахід шифру було присвоєно саме йому. <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BD,_%D0%94%D1%8D%D0%B2%D0%B8%D0%B4" target="_blank">Давид Кан</a> у своїй книзі <a href="https://uk.wikipedia.org/wiki/%D0%97%D0%BB%D0%BE%D0%BC%D1%89%D0%B8%D0%BA%D0%B8_%D0%BA%D0%BE%D0%B4%D1%96%D0%B2_(%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0)"target="_blank">"Зломщики кодів"</a> відгукнувся про це осудливо, написавши, що історія "проігнорувала важливий факт і назвала шифр ім'ям Віженера, незважаючи на те, що він нічого не зробив для його створення".</p></p>
+            <p>Шифр Віженера мав репутацію винятково стійкого до "ручного" злому. Відомий письменник і математик  <a href="https://uk.wikipedia.org/wiki/%D0%9B%D1%8C%D1%8E%D1%97%D1%81_%D0%9A%D0%B5%D1%80%D1%80%D0%BE%D0%BB"target="_blank">Чарльз Лютвідж Доджсон (Льюїс Керролл)</a> назвав шифр Віженера таким, що не піддається злому, у своїй статті "Алфавітний шифр" англ. The Alphabet Cipher, опублікованій у дитячому журналі в 1868 році. 1917 року <a href="https://uk.wikipedia.org/wiki/Scientific_American"target="_blank">Scientific American</a> також відгукнувся про шифр Віженера, як про такий, що не піддається злому. Це уявлення було спростовано після того, як <a href="https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D1%96%D0%B4%D1%80%D1%96%D1%85_%D0%92%D1%96%D0%BB%D1%8C%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC_%D0%9A%D0%B0%D0%B7%D1%96%D1%81%D0%BA%D1%96"target="_blank">Касіскі</a> повністю зламав шифр у XIX столітті, хоча відомі випадки злому цього шифру деякими досвідченими криптоаналітиками ще в XVI столітті.</p>
+            <p>Шифр Віженера досить простий для використання в польових умовах, особливо якщо застосовуються шифрувальні диски. Наприклад, "конфедерати" використовували мідний шифрувальний диск для шифру Віженера під час <a href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%BE%D0%BC%D0%B0%D0%B4%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%B2%D1%96%D0%B9%D0%BD%D0%B0#:~:text=%D0%93%D1%80%D0%BE%D0%BC%D0%B0%D0%B4%D1%8F%CC%81%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%20%D0%B2%D1%96%D0%B9%D0%BD%D0%B0%CC%81%20%E2%80%94%20%D0%B2%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%B2%D0%B0%20%D0%B1%D0%BE%D1%80%D0%BE%D1%82%D1%8C%D0%B1%D0%B0%20%D0%B7%D0%B0,%D0%B3%D1%80%D0%BE%D0%BC%D0%B0%D0%B4%D1%8F%D0%BD%D0%B0%D0%BC%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D1%83%D1%81%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B0%20%D1%87%D0%B8%20%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8."target="_blank">Громадянської війни</a>. Послання Конфедерації були далекі від секретних, і їхні противники регулярно зламували повідомлення. Під час війни командування Конфедерації покладалося на три ключові словосполучення: "Manchester Bluff", "Complete Victory" і -- оскільки війна добігала кінця -- "Come Retribution".</p>
+            <p><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%BD%D0%B0%D0%BC,_%D0%93%D0%B8%D0%BB%D0%B1%D0%B5%D1%80%D1%82"target="_blank">Гілберт Вернам</a> спробував поліпшити зламаний шифр (він дістав назву шифр Вернама-Віженера 1918 року), але, незважаючи на його вдосконалення, шифр так і залишився вразливим до криптоаналізу. Однак робота Вернама в кінцевому підсумку все ж привела до отримання шифру, який по-справжньому важко зламати.</p>
+            </div>
+            <!-- Розгадка шифрування -->
+            <div>
+                <a name="Solution"></a>
+                <br><h2>Хто і як розгадав шифр Віжинера</h2>
+                <hr>
+                <a href="https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D1%96%D0%B4%D1%80%D1%96%D1%85_%D0%92%D1%96%D0%BB%D1%8C%D0%B3%D0%B5%D0%BB%D1%8C%D0%BC_%D0%9A%D0%B0%D0%B7%D1%96%D1%81%D0%BA%D1%96"target="_blank"><p>Фрідріх Касіскі</a> в 1863 році опублікував метод, який дозволив йому розшифрувати шифр Віженера. Він виявив, що можна використовувати частотний аналіз, навіть якщо в тексті використовується поліалфавітний шифр, такий як шифр Віженера.</p>
+             <p>Касіскі помітив, що якщо ключ шифру Віженера має коротку довжину, то шифрований текст має тенденцію містити повторення однакових фрагментів тексту. Використовуючи цю властивість, Касіскі зміг виявити довжину ключа та розкрити шифр.</p>
+            <p>Його метод, який отримав назву касіскі атака, став першим відомим методом криптоаналізу, спрямованим на поліалфавітні шифри.</p>
+            </div>
+            <!-- Використання -->
+            <div>
+                <a name="Used"></a>
+                <a href="full.jpg" target=_blank ><img src="full.jpg" width="300" height="250" align="left" hspace=15 alt="Шифрування Віженера"  title="Шифрування Віженера" class="image-border"></a>
+                <br><h2>Де використовували цей метод</h2>
+                <hr>
+                Шифр Віженера був широко використовуваний в минулому для зашифрування та розшифрування повідомлень. 
+                <p><i><b><u>Ось деякі з його історичних застосувань:</i></b></u></p>
+                <dl>
+                    <dt><b>Військове шифрування:</b></dt><dd> Шифр Віженера використовувався військовими для таємного зв'язку. Зокрема, він був використаний французькими дипломатами та військовими на початку XV століття.</dd>
+                    <dt><b>Шифрування дипломатичних листів:</b></dt><dd> Цей шифр був популярним серед дипломатів, які використовували його для захисту конфіденційної інформації в дипломатичній переписці.</dd>
+                    <dt><b>Піратство та розвідка:</b></dt><dd> Пірати також використовували шифр Віженера для забезпечення конфіденційності своїх повідомлень. Це було особливо важливо для розсилки інформації про місцезнаходження скарбів або інших таємниць.</dd>
+                    <dt><b><p>Криптографічні дослідження:</b></dt><dd> Шифр Віженера залишався популярним об'єктом досліджень в криптографії протягом століть. Він використовувався для розробки та тестування нових методів атаки та покращення систем шифрування.</dd></p>
+            </dl>
+            <br>
+            </div>
+        </div>    
+      </main>   
+    </body>
+    <footer>
+      <div class="botton">
+          <!--Контактна інформація-->
+          <div>
+             <br><br>
+             <div class="contact">
+              <a href="Vprog.png" target=_blank><img src="Vprog.png" alt="Логотип" title="Логотип" width="300" height="300"  hspace=15 class="image-border"></a>
+              <ul>
+                <h3><font color="#E6E6E6">Зворотній зв'язок</font></h3>
+                <li><a href="#">+380960000000</a></li>
+                <li><a href="#">vdemcenko234@gmail.com</a></li>
+                <li><a href="#">Наш телеграм</a></li>
+                <li><a href="#">Наш інстаграм</a></li>
+                <li><a href="#">Сайт конструктор</li>
+        </ul>
+      <a href="author.jpg" target=_blank><img src="author.jpg" alt="Автор" title="Автор" width="290" height="300"  hspace=15 class="image-border"></a>
+  </div>
+          <br>
+  </div>
+  </footer>
+</html>

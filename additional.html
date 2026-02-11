@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+        <header class="fon">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Додатковий матеріал</title>
+<!--Шрифти-->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+<!-- Меню горизонтальне -->
+<nav> 
+    <ul class="menu-main">
+        <li><a class="li" href="index.html" >Головна</a></li>
+        <li><a href="history.html">Історія</a></li>
+        <li><a href="/">Додатковий матеріал</a></li>
+        <!--<li><a href="lab.html">JavaScript</a></li>--> <!--Закоментовано, бо для курсової не потрібно-->
+      </ul>
+  </nav>
+  <h1 align="center">Додатковий матеріал</h1>
+  <br><br><br>
+</header>
+    </head>
+    <body class="fonts">
+        <div>
+            <div class="btn-up btn-up_hide"></div>
+
+            <script>
+              const btnUp = {
+                el: document.querySelector('.btn-up'),
+                show() {
+                  // видалимо у кнопці клас btn-up_hide
+                  this.el.classList.remove('btn-up_hide');
+                },
+                hide() {
+                  // додамо до кнопки клас btn-up_hide
+                  this.el.classList.add('btn-up_hide');
+                },
+                addEventListener() {
+                  // при прокрутці вмісту сторінки 
+                  window.addEventListener('scroll', () => {
+                    // визначаємо величину прокрутки 
+                    const scrollY = window.scrollY || document.documentElement.scrollTop;
+                    // якщо сторінка прокручена більше ніж на 400px, торобимо кнопку видимою, в іншому випадку ховаємо 
+                    scrollY > 400 ? this.show() : this.hide();
+                  });
+                  // при натисканні на кнопку .btn-up
+                  document.querySelector('.btn-up').onclick = () => {
+                    // переміщаємося на початок сторінки
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: 'smooth'
+                    });
+                  }
+                }
+              }
+              btnUp.addEventListener();
+            </script>
+
+            <!-- Меню -->
+            <br>
+            <nav>
+                <ul class="pills">
+                    <li><a href="#Example">Додаткові завдання</a></li>
+                    <li><a href="#Example1">Приклад 1</a></li>
+                    <li><a href="#Example2">Приклад 2</a></li>
+                    <li><a href="#Example3">Приклад 3</a></li>
+                    <li><a href="#Task">Завдання для самостійного опрацювання</a></li>
+                    <li><a href="#Material">Додатковий матеріал</a></li>
+                    <li><a href="#Video">Відео</a></li>
+                    <li><a href="#Picture">Таблиці Віженера на різних мовах</a></li>
+                    <li><a href="#Link">Посилання на онлайн шифрувальник</a></li>
+                </ul>
+                </nav>
+            </div>
+            <!--Додаткові завдання-->
+             <!--Приклад 1-->
+        <div>
+            <a name="Example"></a>
+            <br>
+           <p><h2>Додаткові завдання</h2></p>
+            <hr>
+            <a name="Example1"></a>
+          <h3><b><u>Приклад 1.</b></u></h3>
+            <p><b><i>Завдання:</b></i> Ви та ваші шкільні друзі плануєте вигнати корнуольських піксі з їхньої клітки. Ви повинні ефективно спілкуватися з друзями про свої маленькі пустощі. Отже, щоб професор Снейп не спіймав вас, ви та ваші друзі вирішите використовувати ключове слово <font size="4" color= "#800080"><i>«Harry»</i></font> для шифрування своїх повідомлень.</p>
+            <p><b>Крок 1.Виберіть ключове слово</b></p>
+            <p>Виберіть ключове слово. У нашому випадку <font size="4" color= "#800080"><i>«Harry»</i></font>.</p>
+            <p><b>Крок 2. Створіть ключ</b></p>
+           <p> Напишіть своє повідомлення та повторюйте слово <font size="4" color= "#800080"><i>«Harry»</i></font>, поки не заміните всі літери в повідомленні. На малюнку 1 показано, як ви можете створити ключ, замінивши кожну літеру слова <font size="4" color= "#800080"><i>«Harry»</i></font> на відповідну літеру в повідомленні.</p>
+        <figure >
+            <a href="exemple1.webp" target=_blank><img src="exemple1.webp" width="600" height="90" align="center" hspace=400 alt="Малюнок"  title="Малюнок 1: Підстановка ключового слова для створення ключа" class="image-border"></a>
+            <figcaption align="center"><font size="4" color= "#666666"><i>Малюнок 1: Підстановка ключового слова для створення ключа</i></font></figcaption>
+        </figure> 
+            <p><b>Крок 3. Використовуйте квадрат Віженера</b></p>
+           <p> Після того, як ваша заміна, згадана на малюнку 1, буде готова, наступним кроком буде використання <u>квадрата Віженера</u> для шифрування вашого повідомлення. На малюнку 2 зображено квадрат Віженера.</p>
+        <figure >
+            <a href="exemple2.webp" target=_blank><img src="exemple2.webp" width="400" height="400" align="center" hspace=515 alt="Малюнок 2"  title="Малюнок 2: Площа Віженера" class="image-border"></a>
+            <figcaption align="center"><font size="4" color= "#666666"><i>Малюнок 2: Площа Віженера</i></font></figcaption>
+        </figure>
+        <p><b>Крок 4. Шифрування</b></p>
+        <p>У крайньому лівому стовпчику знайдіть літеру «P» (перша літера повідомлення). Потім у самому верхньому рядку знайдіть букву «H» (перша літера ключа). Потім знайдіть літеру, яка знаходиться на перетині P-рядка та H-стовпця. Літера на перетині «W» є першою літерою зашифрованого повідомлення. Друга літера повідомлення в рядку I та друга літера ключа в стовпці A перетинаються біля літери «I». Подібним чином можна зашифрувати всі літери повідомлення. На малюнку 3 показано зашифрований текст після виконання процесу шифрування для всіх літер у повідомленні.</p>
+        <figure >
+           <a href="exemple3.webp" target=_blank> <img src="exemple3.webp" width="600" height="90" align="center" hspace=400 alt="Малюнок 3"  title="Малюнок 3. Зашифрований текст після шифрування" class="image-border"></a>
+           <figcaption align="center"><font size="4" color= "#666666"><i>Малюнок 3. Зашифрований текст після шифрування</i></font></figcaption>
+       </figure>
+<p><b>Крок 4. Розшифровка</b></p>
+<p>Для розшифровки знайдіть першу літеру ключа «H» у самому верхньому рядку квадрата Віженера на малюнку 1. У стовпчику «H» ковзайте вниз, доки не знайдете літеру «W». Знайшовши літеру «W» у цьому стовпці, проведіть пальцем по рядку до крайнього лівого стовпця. Літера в крайньому лівому стовпчику - «P». Це перша літера розшифрованого тексту. Подібним чином можна розшифрувати всі інші символи зашифрованого тексту. </p> 
+        </div>
+        <!--Приклад 2-->
+        <div>
+            <a name="Example2"></a>
+            <h3><b><u>Приклад 2.</b></u></h3>
+           <p> <b><i>Завдання:</b></i> Візьмемо <font size="4" color= "#800080"><i>VINTAG</i></font> нашим ключовим словом. Щоб зашифрувати таку фразу, як <font size="4" color= "#800080"><i>THINK ABOUT</i></font>, нам потрібно повторювати ключову фразу, поки вона не збігатиметься з довжиною відкритого тексту:</p>
+            <figure >
+               <a href="example4.png" target=_blank><img src="example4.png" width="500" height="80" align="center" hspace=460 alt="Малюнок"  title="Малюнок 1: Підстановка ключового слова для створення ключа"class="image-border"></a>
+           </figure>
+           <p>Тепер для кожного із символів вихідного тексту ми використовуємо замінник, який розташований у рядку, що починається з літери ключового слова, і в стовпці, що починається з літери відкритого тексту. Наприклад, першу букву замінено символом, який розташований на перетині T-стовпця та V-рядка – це «O».</p>
+           <figure >
+           <a href="example5.png" target=_blank> <img src="example5.png" width="500" height="80" align="center" hspace=460 alt="Малюнок 2"  title="Малюнок 2. Зашифрований текст після шифрування"class="image-border"></a>
+       </figure>
+       <p>Таким чином, розшифровка є протилежним процесом: ми знаходимо рядки, які відповідають буквам ключового слова, знаходимо шифровані літери, а потім записуємо літери, які позначають стовпці, отримуючи відкритий текст.</p>
+        </div>
+        <!--Приклад 3-->
+        <div>
+            <a name="Example3"></a>
+            <h3><b><u>Приклад 3.</b></u></h3>
+            <p><b><i>Завдання:</b></i> Hехай відкритий текст буде <font size="4" color= "#800080"><i>"PLAINTEXT ENGLISH"</i></font>, а ключове слово - <font size="4" color= "#800080"><i>"KEY""</i></font>.</p>
+            <figure >
+                <a href="example6.gif" target=_blank><img src="example6.gif" width="600" height="50" align="center" hspace=410 alt="Малюнок 3"  title="Малюнок 1. Зашифрований текст після шифрування" class="image-border"></a>
+           </figure>
+           <p>Ви можете використовувати стовпці під K, E та Y у таблиці, щоб зробити заміни. Наприклад, п’ять червоних квадратів дають <font size="4" color= "#800080"><i>«PLAIN»</i></font> → <font size="4" color= "#800080"><i>«ZPYSR»</i></font>:</p>
+           <figure >
+           <a href="exemple7.gif" target=_blank><img src="exemple7.gif" width="500" height="300" align="center" hspace=460 alt="Малюнок 2"  title="Малюнок 2: Площа Віженера" class="image-border"></a>
+       </figure>
+        </div>
+        <!--Завдання-->
+        <div>
+            <a name="Task"></a>
+            <h2><b>Завдання для самостійного опрацювання</b></h2>
+            <hr>
+            <h3><b><u>Завдання 1.</u></b></h3>
+            <p>Ви та ваші однокласники плануєте допомогти один одному на контрольній роботі. Ви повинні передати повідомленнями правильні відповіді. Отже, щоб викладач не спіймав вас, ви та ваших друзів ви вирішуєтете використовувати ключове слово <font size="4" color= "#800080"><i>«Відмінно»</i></font> для шифрування своїх повідомлень. Ти хочеш передати повідомлення з таким текстом <font size="4" color= "#800080"><i>"Що у десятому"</i></font>.Зашифруй це повідомлення.</p>
+            <details>
+               <p><summary><font size="4" color="#3b5891"><b>Відповідь</b></font></summary></p>
+               <p><i>ющ ш сндмєрчш</i></p>
+            </details>
+            <h3><b><u>Завдання 2.</u></b></h3>
+            <p>Розшифруй дане повідомлення <font size="4" color= "#800080"><i>"йгтґте екізеубґ зіамлмґ"</i></font>. Ключове слово <font size="4" color= "#800080"><i>"сонце"</i></font>.</p>
+            <details>
+                <p><summary><font size="4" color="#3b5891"><b>Відповідь</b></font></summary></p>
+                <p><i>ходімо сьогодні гуляти</i></p>
+             </details>
+            <h3><b><u>Завдання 3.</u></b></h3>
+            <p>Зашифруй повідомлення <font size="4" color= "#800080"><i>"МОЯ КУРСОВАЯ РАБОТА"</i></font>, використовуючи ключове слово <font size="4" color= "#800080"><i>"ОЦІНКА".</p></i></font>
+            <details>
+                <p><summary><font size="4" color="#3b5891"><b>Відповідь</b></font></summary></p>
+                <p><i>біи юґреійн бопіан</i></p>
+             </details>
+             <br>
+             <p><b>Якщо виникають питання перегляньте ще раз <a href="index.html">матеріал</a> або скористуйся <a href="#Material">додатковим матеріалом</a>.</b></p>
+              <p><b>Для перевірки своїх відповідей тисни <a href="https://findhow.org/5076-shifr-vizhenera-onlajn.html"target="_blan">ТУТ</a>.</b></p>
+              <br>
+             <!--Переповнення (потім потрібно забрати)-->
+             <!--<div class="block">
+            <font size="4" color= "#cc0066"><p><b>/////////////////////////////////////////////////////////Якщо виникають питання перегляньте ще раз <a href="index.html">матеріал</a> або скористуйся <a href="#Material">додатковим матеріалом</a>.</b></p></font>
+            <font size="4" color= "#e60000"><p><b>Для перевірки своїх відповідей тисни <a href="https://findhow.org/5076-shifr-vizhenera-onlajn.html"target="_blan">ТУТ</a></b></p></font>
+        </div>-->
+        </div>
+    <!--Додатковий матеріал-->
+    <div>
+        <a name="Material"></a>
+        <h2><b>Додатковий матеріал</b></h2>
+        <hr>
+        <a name="Video"></a>
+       <h3>Відео</h3>
+       <p aligh="center" hspace="5">
+        <iframe width="470" height="300" src="Vigenere Cipher.mp4"> </iframe>
+        <iframe width="470" height="300" src="Vigenere Cipher Explained (with Example).mp4" >  </iframe>
+        <iframe width="470" height="300" src="Vigenere CIpher (1).mp4"> </iframe>
+       </p>
+        <hr>
+        <a name="Picture"></a>
+        <h3>Таблиці Віженера на різних мовах</h3>
+        <a href="pic4.png" target=_blank><img src="pic4.png" width="700" height="500" align="center" hspace=20 class="image-border"></a>
+        <a href="pic3.png" target=_blank><img src="pic3.png" width="700" height="500" align="right" hspace=20 class="image-border"></a>
+       <br><br><hr>
+        <a name="Link"></a>
+        <p><h3>Посилання на онлайн шифрувальник</h3></p>
+      <p>Тисни <a href="https://findhow.org/5076-shifr-vizhenera-onlajn.html"target="_blan">тут</a> та перевір чи правильно виконав своє завдання.</p>
+    </div>
+    <br>
+    </body>
+    <footer>
+      <div class="botton">
+          <!--Контактна інформація-->
+          <div>
+             <br><br>
+             <div class="contact">
+              <a href="Vprog.png" target=_blank><img src="Vprog.png" alt="Логотип" title="Логотип" width="300" height="300"  hspace=15 class="image-border"></a>
+              <ul>
+              <h3><font color="#E6E6E6">Зворотній зв'язок</font></h3>
+              <li><a href="tel:+380963981944">+380963981944</a></li>
+              <li><a href="mailto:vdemcenko234@gmail.com">vdemcenko234@gmail.com</a></li>
+              <li><a href="https://t.me/vrnkdm"target="_blan">Наш телеграм</a></li>
+              <li><a href="https://www.instagram.com/_v_demchenko_?igsh=MWUycXR6OTcycjUwdw=="target="_blan">Наш інстаграм</a></li>
+              <li><a href="https://vdemcenko234.wixsite.com/myselfandmywork" target="_blan">Сайт конструктор</li>
+      </ul>
+      <a href="author.jpg" target=_blank><img src="author.jpg" alt="Автор" title="Автор" width="290" height="300"  hspace=15 class="image-border"></a>
+  </div>
+          <br>
+  </div>
+  </footer>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+        <header class="fon">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Шифрування методом Віжинера</title>
+<!--Шрифт-->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+<!-- Меню горизонтальне -->
+<div>
+<nav> 
+    <ul class="menu-main">
+        <li><a class="li" href="/" >Головна</a></li>
+        <li><a href="history.html">Історія</a></li>
+        <li><a href="additional.html">Додатковий матеріал</a></li>
+        <!--<li><a href="lab.html">JavaScript</a></li>-->  <!--Закоментовано, бо для курсової не потрібно-->
+      </ul>
+    <!--<table border=0 align="center" width="50%" cellpadding="10" cellspacing="10">
+    <tr class="menu-main">
+        <td  bgcolor= "#768A96" width="5%" align="center"> <a href="/">Головна</a></td>
+        <td  bgcolor= "#768A96" width="5%" align="center"><a href="history.html">Історія</a></td>
+        <td  bgcolor= "#768A96" width="5%" align="center"><a href="additional.html">Додатковий матеріал</a></td>
+    </tr>
+</table>-->
+  </nav>
+</div>
+  <h1 align="center">Шифрування методом Віженера</h1>
+  <br><br><br>
+</header>
+    </head>
+    <body>
+        <main  class="fonts">
+            <div class="btn-up btn-up_hide"></div>
+
+            <script>
+              const btnUp = {
+                el: document.querySelector('.btn-up'),
+                show() {
+                  // видалимо у кнопці клас btn-up_hide
+                  this.el.classList.remove('btn-up_hide');
+                },
+                hide() {
+                  // додамо до кнопки клас btn-up_hide
+                  this.el.classList.add('btn-up_hide');
+                },
+                addEventListener() {
+                  // при прокрутці вмісту сторінки 
+                  window.addEventListener('scroll', () => {
+                    // визначаємо величину прокрутки 
+                    const scrollY = window.scrollY || document.documentElement.scrollTop;
+                    // якщо сторінка прокручена більше ніж на 400px, торобимо кнопку видимою, в іншому випадку ховаємо 
+                    scrollY > 400 ? this.show() : this.hide();
+                  });
+                  // при натисканні на кнопку .btn-up
+                  document.querySelector('.btn-up').onclick = () => {
+                    // переміщаємося на початок сторінки
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: 'smooth'
+                    });
+                  }
+                }
+              }
+              btnUp.addEventListener();
+            </script>
+
+         <!--Меню -->
+         <div>
+<nav>
+    <br>
+<ul class="pills">
+    <li><a href="#Encryption">Метод Віжинера</a></li>
+    <li><a href="#Work">Як працює метод</a></li>
+    <li><a href="#Example">Приклад</a></li>
+</ul>
+</nav>
+</div>
+<!-- Метод Віженера -->
+<div>
+    <a name="Encryption"></a>
+    <br><h2>Метод Віженера</h2>
+    <hr>
+    <a href="pic1.png" target=_blank><img src="pic1.png" alt="Метод шифрування Віженера" title="Метод шифрування Віженера" width="190" height="190" align="left" hspace=15 class="image-border"></a>
+    <p><font size="4" color= "#485e6a"><b>Шифр Віженера</b></font> - метод поліалфавітного шифрування буквеного тексту з використанням ключового слова.</p>
+   <p> Цей метод є простою формою багатоалфавітної заміни. Шифр Віженера винаходили багато разів. Уперше цей метод описав <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%BB%D0%B0%D0%B7%D0%BE,_%D0%94%D0%B6%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B8_%D0%91%D0%B0%D1%82%D1%82%D0%B8%D1%81%D1%82%D0%B0"target="_blank">Джован Баттіста Беллазо</a> (італ. Giovan Battista Bellaso) у книзі La cifra del. Sig. Giovan Battista Bellaso 1553 року, однак, у XIX столітті отримав ім'я <a href="https://uk.wikipedia.org/wiki/%D0%91%D0%BB%D0%B5%D0%B7_%D0%B4%D0%B5_%D0%92%D1%96%D0%B6%D0%B5%D0%BD%D0%B5%D1%80"target="_blank"> Блеза Віженера</a>, французького дипломата. Метод простий для розуміння та реалізації, він є недоступним для простих методів криптоаналізу.</p>
+    <p>Шифр Віженера є шифром підстановки, тобто шифром, у якому кожна літера початкового тексту заміняється літерою шифр-тексту. Для взлому таких шифрів використовується частотний криптоаналіз.</p>
+</div>
+<!-- Як працює -->
+    <div>
+        <a name="Work"></a>
+<br><h2>Як працює метод</h2>
+<hr>
+<br><a href="pic5.png" target=_blank><img src="pic5.png" alt="Метод шифрування Віженера" title="Метод шифрування Віженера" width="300" height="200" align="right" hspace=15 class="image-border"></a>
+<p>Система шифрування Віженера подібна до такої <a href="https://uk.wikipedia.org/wiki/%D0%A8%D0%B8%D1%84%D1%80_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8F#:~:text=%D0%A8%D0%B8%D1%84%D1%80%20%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8F%20%D0%B0%D0%B1%D0%BE%20%D1%88%D0%B8%D1%84%D1%80%20%D0%B7%D1%81%D1%83%D0%B2%D1%83,%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D1%96%D1%82%D1%96%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D0%BB%D1%83%20%D0%BA%D1%96%D0%BB%D1%8C%D0%BA%D1%96%D1%81%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D1%96%D0%B9."target="_blank">системи шифрування Цезаря</a>, у якої ключ підставляння міняється від букви до букви. Цей шифр багатоалфавітної заміни можна описати таблицею шифрування, яку називають таблицею (квадратом) Віженера. </p>
+<p>Таблиця Віженера використовується для шифрування та дешифрування.</p>
+ <p><i><b><u></u>Таблиця має два входи:</i></b></u></p>
+<ul>
+<li>верхній рядок підкреслених символів, який використовується для зчитування чергової букви початкового тексту;</li>
+<li>крайній лівий стовпець ключа.</li>
+</ul>
+<p>У шифрі Цезаря кожна буква алфавіту зсувається на кілька позицій; наприклад, у шифрі Цезаря, якщо зсунути праворуч на 5, А стало б Е, Б стало б Е, В - Ж і так далі</p>
+<p><table bgcolor= "#b3c3cb" border=1 align="center" width="70%"></p>
+	<tr align="center">
+		<td width="20%">Вихідний алфавіт</td>
+		<td>А</td>
+        <td>Б</td>
+        <td>В</td>
+        <td>Г</td>
+        <td>Д</td>
+        <td>Е</td>
+        <td>Є</td>
+        <td>Ж</td>
+        <td>З</td>
+        <td>З</td>
+        <td>И</td>
+        <td>І</td>
+        <td>Ї</td>
+        <td>Й</td>
+        <td>К</td>
+        <td>Л</td>
+        <td>М</td>
+        <td>Н</td>
+        <td>О</td>
+        <td>П</td>
+        <td>Р</td>
+        <td>С</td>
+        <td>Т</td>
+        <td>У</td>
+        <td>Ф</td>
+        <td>Х</td>
+        <td>Ц</td>
+        <td>Ч</td>
+        <td>Ш</td>
+        <td>Щ</td>
+		<td>Ь</td>
+        <td>Ю</td>
+        <td>Я</td>
+	</tr>
+	<tr align="center">
+		<td>Шифрований</td>
+		<td>Е</td>
+        <td>Є</td>
+        <td>Ж</td>
+        <td>З</td>
+        <td>И</td>
+        <td>І</td>
+        <td>І</td>
+        <td>Ї</td>
+        <td>Й</td>
+        <td>К</td>
+        <td>Л</td>
+        <td>М</td>
+        <td>Н</td>
+        <td>О</td>
+        <td>П</td>
+        <td>Р</td>
+        <td>С</td>
+        <td>Т</td>
+        <td>У</td>
+        <td>Ф</td>
+        <td>Х</td>
+        <td>Ц</td>
+        <td>Ч</td>
+        <td>Ш</td>
+        <td>Щ</td>
+		<td>Ь</td>
+        <td>Ю</td>
+        <td>Я</td>
+        <td>А</td>
+        <td>Б</td>
+        <td>В</td>
+        <td>Г</td>
+        <td>Д</td>
+	</tr>
+</table>
+<p>Шифр Віженера складається з послідовності кількох шифрів Цезаря з різними значеннями зсуву. Для зашифровування може використовуватися таблиця алфавітів, звана tabula recta або квадрат (таблиця) Віженера. Стосовно до українського алфавіту таблиця Віженера складається з рядків по 33 символи, причому кожен наступний рядок зсувається на кілька позицій. Таким чином, у таблиці виходить 33 різних шифрів Цезаря. На кожному етапі шифрування використовуються різні алфавіти, які обирають залежно від символу ключового слова.</p>
+<figure >
+   <a href="pic3.png" target=_blank> <img src="pic3.png" alt="Таблиця Віженера для українського алфавіту" title="Таблиця Віженера для українського алфавіту" width="35%"  hspace="450" align="center" class="image-border"></a>
+    <figcaption align="center"><b>Таблиця Віженера для українського алфавіту</b></figcaption>
+</figure>
+<!--<figure>
+   <a href="pic4.png" target=_blank><img src="pic4.png" alt="Таблиця Віженера для англійського алфавіту" title="Таблиця Віженера для англійського алфавіту"  width="50%"  align="center" hspace="340" class="image-border"></a>
+    <figcaption align="center"><b>Таблиця Віженера для англійського алфавіту</b></figcaption>
+</figure>-->
+<p>Якщо пронумерувати літери алфавіту від 0 до 32 <u>(а → 0, б → 1, в → 2, …)</u>, то шифрування Віженера є можливим представити формулою</p>
+<p align="center"><b>Ci = (Pi + Kj) mod 33,</b></p>
+<p>де <i><u><font size="4" color= "#485e6a">Kj — j</font></u></i>-та літера ключового слова.
+Ключове слово повторюється, поки не отримано гаму, рівну довжині повідомлення</p>
+
+</div>
+<!-- Приклад -->
+<div>
+    <a name="Example"></a>
+<br><h2>Приклад</h2>
+<hr>
+<p>Наприклад, припустимо, що вихідний текст і ключ мають такий вигляд:</p>
+<p><table bgcolor= "#b3c3cb" border=1 align="center" width="70%">
+    <tr align="center">
+		<td width="10%">Текст</td>
+		<td>Ш</td>
+        <td>И</td>
+        <td>Ф</td>
+        <td>Р</td>
+        <td>В</td>
+        <td>І</td>
+        <td>Ж</td>
+        <td>И</td>
+        <td>Н</td>
+        <td>Е</td>
+        <td>Р</td>
+        <td>А</td>
+       
+	</tr>
+	<tr align="center">
+		<td>Ключ</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+	</tr>
+</table></p>
+<p>Щоб зашифрувати текст, необхідно записати ключове слово "КОД" циклічно доти, доки його довжина не відповідатиме довжині вихідного тексту.</p>
+<!-- Таблиці -->
+<p><table bgcolor= "#b3c3cb" border=1 align="center" width="70%">
+    <tr align="center">
+		<td width="10%">Текст</td>
+		<td>Ш</td>
+        <td>И</td>
+        <td>Ф</td>
+        <td>Р</td>
+        <td>В</td>
+        <td>І</td>
+        <td>Ж</td>
+        <td>И</td>
+        <td>Н</td>
+        <td>Е</td>
+        <td>Р</td>
+       
+	</tr>
+	<tr align="center">
+		<td>Ключ</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+        <td>Д</td>
+        <td>К</td>
+        <td>О</td>
+	</tr>
+    <tr align="center">
+		<td>Шифр</td>
+        <td>Г</td>
+        <td>Ч</td>
+        <td>Ш</td>
+        <td>И</td>
+        <td>Р</td>
+        <td>М</td>
+        <td>С</td>
+        <td>У</td>
+        <td>С</td>
+        <td>П</td>
+        <td>Я</td>
+	</tr>
+</table></p>
+<p>Перший символ вихідного тексту ("Ш") зашифровано послідовністю К, яка є першим символом ключа. Перший символ зашифрованого тексту ("К") знаходиться на перетині рядка К і стовпця Ш у таблиці Віженера. Так само для другого символу вихідного тексту використовується другий символ ключа; тобто другий символ зашифрованого тексту ("И") виходить на перетині рядка О і стовпчика И. Решта вихідного тексту шифрується в такий самий спосіб.</p>
+</div>
+<br>
+
+</main>
+</body>
+    <footer>
+        <div class="botton">
+            <!--Контактна інформація-->
+            <div>
+               <br><br>
+               <div class="contact">
+                <a href="Vprog.png" target=_blank><img src="Vprog.png" alt="Логотип" title="Логотип" width="300" height="300"  hspace=15 class="image-border"></a>
+                <ul>
+                <h3><font color="#E6E6E6">Зворотній зв'язок</font></h3>
+                <li><a href="tel:+380963981944">+380963981944</a></li>
+                <li><a href="mailto:vdemcenko234@gmail.com">vdemcenko234@gmail.com</a></li>
+                <li><a href="https://t.me/vrnkdm"target="_blan">Наш телеграм</a></li>
+                <li><a href="https://www.instagram.com/_v_demchenko_?igsh=MWUycXR6OTcycjUwdw=="target="_blan">Наш інстаграм</a></li>
+                <li><a href="https://vdemcenko234.wixsite.com/myselfandmywork" target="_blan">Сайт конструктор</li>
+        </ul>
+        <a href="author.jpg" target=_blank><img src="author.jpg" alt="Автор" title="Автор" width="290" height="300"  hspace=15 class="image-border"></a>
+    </div>
+            <br>
+    </div>
+    </footer>
+</html>
